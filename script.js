@@ -4,19 +4,21 @@
 
 
 
-human= prompt(" rock , paper , scissors");
+let human= prompt(" rock , paper , scissors");
+let humanAnswer = human;
 
 
-let computer = computerPlay
+let random = ["rock", "paper", "scissors"];
+let result = random[Math.floor(Math.random() * random.length)];
+let computer = result;
 
-function computerPlay() {
-    random = ["rock", "paper", "scissors"];
-    return random[Math.floor(Math.random() * random.length )];
-}
+
+ 
+
    
 
-function game(human , computer) {
-    if (human === "rock") {
+function game(humanAnswer , computer) {
+    if (humanAnswer === "rock") {
         if (computer === "rock") {
             return "Draw!";
         } else if (computer === "paper") {
@@ -24,7 +26,7 @@ function game(human , computer) {
         } else {
             return "You win! Rock beats scissors.";
         }
-    } else if (human === "paper") {
+    } else if (humanAnswer === "paper") {
         if (computer === "rock") {
             return "You win! Paper beats rock.";
         } else if (computer === "paper") {
